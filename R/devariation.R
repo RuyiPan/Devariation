@@ -61,7 +61,7 @@ dev <- function(X, lambda=NULL) {
 #' Computes the devariation RV (dRV) coefficient between two data matrices.
 #' The procedure first removes dominant structured variation from each matrix
 #' using the \code{dev()} function, producing devariation-adjusted data
-#' \eqn{dX} and \eqn{dY}. The RV coefficient is then computed on the
+#' \code{dX} and \code{dY}. The RV coefficient is then computed on the
 #' devariation-adjusted matrices to quantify residual cross-structure association.
 #'
 #' This approach aims to mitigate the influence of strong individual
@@ -78,7 +78,7 @@ dev <- function(X, lambda=NULL) {
 #'
 #' @return A list containing:
 #' \describe{
-#'   \item{drvRes}{The devariation RV coefficient computed from
+#'   \item{drvRes}{The devariation RV testing results from
 #'   the devaried matrices \code{dX} and \code{dY}.}
 #' }
 #'
