@@ -17,3 +17,5 @@ RoxygenNote: 7.3.3
 Imports: 
     denoiseR,
     FactoMineR
+URL: https://github.com/RuyiPan/Devariation
+BugReports: https://github.com/RuyiPan/Devariation/issues
