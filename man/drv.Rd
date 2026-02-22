@@ -43,6 +43,7 @@ X <- matrix(rnorm(100 * 80), 100, 80)
 Y <- matrix(rnorm(100 * 60), 100, 60)
 out <- drv(X, Y)
 out$drvRes
+out$drvRes$p.value
 
 }
 \seealso{

@@ -40,7 +40,7 @@ dev <- function(X, lambda=NULL) {
 
   svdx <- svd(X)
   if (is.null(lambda)) {
-    tauX <- estim_sigma(X, method="MAD")
+    tauX <- denoiseR::estim_sigma(X, method="MAD")
     lambda <- tauX*(sqrt(dim(X)[1]) + sqrt(dim(X)[2]))
   }else{
     tauX <- lambda/(sqrt(dim(X)[1]) + sqrt(dim(X)[2]))
@@ -98,5 +98,5 @@ drv <- function(X, Y, lambdaX=NULL, lambdaY=NULL) {
   dX = dev(X, lambdaX)[[1]]
   dY = dev(Y, lambdaY)[[1]]
 
-  return(list(drvRes = coeffRV(dX,dY)))
+  return(list(drvRes = FactoMineR::coeffRV(dX,dY)))
 }
