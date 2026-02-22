@@ -35,7 +35,14 @@ library(denoiseR)
 set.seed(1)
 X <- matrix(rnorm(100 * 80), 100, 80)
 Y <- matrix(rnorm(100 * 60), 100, 60)
-out <- drv(X, Y)
-out$drvRes
-out$drvRes$p.value
+
+dX = dev(X)
+dY = dev(Y)
+out1 = coeffRV(dX[[1]], dY[[1]])
+
+out2 <- drv(X, Y)
+out2$drvRes
+
+out1$p.value
+out2$drvRes$p.value
 ```

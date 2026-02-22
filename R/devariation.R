@@ -95,8 +95,8 @@ dev <- function(X, lambda=NULL) {
 #' @export
 drv <- function(X, Y, lambdaX=NULL, lambdaY=NULL) {
 
-  dX = dev(X, lambdaX)$dX
-  dY = dev(Y, lambdaY)$dX
+  dX = dev(X, lambdaX)[[1]]
+  dY = dev(Y, lambdaY)[[1]]
 
   return(list(drvRes = coeffRV(dX,dY)))
 }
