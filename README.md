@@ -1,0 +1,41 @@
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+# Devariation
+
+<!-- badges: start -->
+
+<!-- badges: end -->
+
+The goal of Devariation is to construct the devariation-adjusted data by
+separating the observed matrix into (i) a dominant structured component
+and (ii) a residual component. The residual is interpreted as the
+devariation-adjusted data, where large-scale structured variation is
+removed.
+
+## Installation
+
+You can install the development version of Devariation from
+[GitHub](https://github.com/RuyiPan/Devariation/) with:
+
+``` r
+# install.packages("pak")
+pak::pak("RuyiPan/Devariation")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+``` r
+library(Devariation)
+library(FactoMineR)
+library(denoiseR)
+
+set.seed(1)
+X <- matrix(rnorm(100 * 80), 100, 80)
+Y <- matrix(rnorm(100 * 60), 100, 60)
+out <- drv(X, Y)
+out$drvRes
+out$drvRes$p.value
+```
