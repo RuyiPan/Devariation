@@ -1,0 +1,19 @@
+Package: Devariation
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Ruyi", "Pan",
+      email = "ruyi.pan@mail.utoronto.ca",
+      role = c("aut", "cre")
+    )
+  )
+Description: This package is for removing individual variation before testing the relationship between two dataset.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.3
+Imports: 
+    denoiseR,
+    FactoMineR
