@@ -30,7 +30,6 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(Devariation)
 library(FactoMineR)
-library(denoiseR)
 
 set.seed(1)
 X <- matrix(rnorm(100 * 80), 100, 80)

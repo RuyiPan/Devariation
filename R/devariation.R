@@ -7,14 +7,14 @@
 #'
 #' The structured component \code{S} is obtained by extracting dominant
 #' low-rank variation from \code{X}. If \code{lambda} is not provided, it is
-#' set using an estimated noise scale \code{tauX} (via \code{estim_sigma()})
+#' set using an estimated noise scale \eqn{\tau_X} (via \code{estim_sigma()})
 #' and the high-dimensional scaling factor \eqn{\sqrt{n} + \sqrt{p}} for an
 #' \eqn{n \times p} matrix \code{X}.
 #'
 #' @param X A numeric matrix (e.g., observed data containing structured signal and noise).
 #' @param lambda Optional nonnegative tuning parameter controlling the strength of
 #'   devariation (how much dominant structure is removed). If \code{NULL}, the
-#'   function estimates \code{tauX} and sets
+#'   function estimates noise scale \eqn{\tau_X} and sets
 #'   \eqn{\lambda = \tau_X(\sqrt{n} + \sqrt{p})}.
 #'
 #' @return A list with the following components:
