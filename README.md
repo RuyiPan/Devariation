@@ -35,10 +35,13 @@ set.seed(1)
 X <- matrix(rnorm(100 * 80), 100, 80)
 Y <- matrix(rnorm(100 * 60), 100, 60)
 
+#Get devariation-adjusted X and Y
 dX = dev(X)
 dY = dev(Y)
+#Conduct RV test
 out1 = coeffRV(dX[[1]], dY[[1]])
 
+#Or using our wrapped function drv to conduct devariation RV 
 out2 <- drv(X, Y)
 out2$drvRes
 
